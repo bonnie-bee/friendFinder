@@ -13,7 +13,7 @@ module.exports = function (app) {
   });
   app.post("/api/users", function (req, res) {
     var newUser = req.body;
-    friendList.push(newUser)
+    friendList.unshift(newUser)
 
     res.json(newUser);
   });
