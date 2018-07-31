@@ -311,6 +311,7 @@
                 Picture: pic,
                 Score: userScore
             };
+           
 
             $.post("/api/users", newUser)
                 .then(function (data) {

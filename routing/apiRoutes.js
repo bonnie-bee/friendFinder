@@ -1,8 +1,20 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const path = require("path");
-const app = express();
+// const express = require("express");
+// const bodyParser = require("body-parser");
+// const path = require("path");
+// const app = express();
 
-app.get("/api/users", function(req, res) { 
-    return res.json(users); 
+const friendList = require("../app/data/friends")
+
+
+module.exports = function (app) {
+
+  app.get("/api/users", function (req, res) {
+    return res.json(friendList);
   });
+  app.post("/api/users", function (req, res) {
+    var newUser = req.body;
+    friendList.push(newUser)
+
+    res.json(newUser);
+  });
+}
