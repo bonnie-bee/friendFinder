@@ -14,31 +14,47 @@ const PORT = 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-
+let users = [];
 
 app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
     htmlPages();
-  });
-  
-  
-  
-  
-  function htmlPages() {
-  
+    apiPage();
+});
+
+
+
+
+
+function htmlPages() {
+
     app.get("/", function (req, res) {
-      console.log('is this working');
-      res.sendFile(path.join(__dirname, "./public/home.html"));
+        console.log('is this working');
+        res.sendFile(path.join(__dirname, "./public/home.html"));
     });
-  
+
     app.get("/survey", function (req, res) {
-      res.sendFile(path.join(__dirname, "./public/survey.html"));
+        res.sendFile(path.join(__dirname, "./public/survey.html"));
     });
-  
-  
-  }
+
+}
+
+function apiPage() {
+    app.get("/api/users", function (req, res) {
+        return res.json(users);
+    });
 
 
+    app.post("/api/users", function (req, res) {
+        var newUser = req.body;
+        users.push(newUser)
+        
+            res.json(newUser);
+        
+
+
+    });
+}
 
 
 
