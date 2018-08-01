@@ -297,22 +297,70 @@
                 .then(function (users) {
 
                     console.log("URL: " + currentURL + "/api/users");
-    console.log(users)
+                    console.log(users)
                     let totalDif = [];
                     for (var i = 1; i < users.length; i++) {
                         totalDif[i] = 0;
                         let newUserQ1 = users[0].Score[0];
                         let listQ1 = users[i].Score[0];
                         let q1Dif = Math.abs(newUserQ1 - listQ1);
-                        totalDif[i]+=q1Dif;
+                        totalDif[i] += q1Dif;
 
                         let newUserQ2 = users[0].Score[1];
                         let listQ2 = users[i].Score[1];
                         let q2Dif = Math.abs(newUserQ2 - listQ2);
-                        totalDif[i]+=q2Dif;
+                        totalDif[i] += q2Dif;
 
-                        alert(`Friends available: ${users[i].Name} and ${totalDif}`)
+                        let newUserQ3 = users[0].Score[1];
+                        let listQ3 = users[i].Score[1];
+                        let q3Dif = Math.abs(newUserQ3 - listQ3);
+                        totalDif[i] += q3Dif;
+
+                        let newUserQ4 = users[0].Score[1];
+                        let listQ4 = users[i].Score[1];
+                        let q4Dif = Math.abs(newUserQ4 - listQ4);
+                        totalDif[i] += q4Dif;
+
+                        // let newUserQ2 = users[0].Score[1];
+                        // let listQ2 = users[i].Score[1];
+                        // let q2Dif = Math.abs(newUserQ2 - listQ2);
+                        // totalDif[i] += q2Dif;
+
+                        // let newUserQ2 = users[0].Score[1];
+                        // let listQ2 = users[i].Score[1];
+                        // let q2Dif = Math.abs(newUserQ2 - listQ2);
+                        // totalDif[i] += q2Dif;
+
+                        // let newUserQ2 = users[0].Score[1];
+                        // let listQ2 = users[i].Score[1];
+                        // let q2Dif = Math.abs(newUserQ2 - listQ2);
+                        // totalDif[i] += q2Dif;
+
+                        // let newUserQ2 = users[0].Score[1];
+                        // let listQ2 = users[i].Score[1];
+                        // let q2Dif = Math.abs(newUserQ2 - listQ2);
+                        // totalDif[i] += q2Dif;
+
+                        // let newUserQ2 = users[0].Score[1];
+                        // let listQ2 = users[i].Score[1];
+                        // let q2Dif = Math.abs(newUserQ2 - listQ2);
+                        // totalDif[i] += q2Dif;
+
+                        // let newUserQ2 = users[0].Score[1];
+                        // let listQ2 = users[i].Score[1];
+                        // let q2Dif = Math.abs(newUserQ2 - listQ2);
+                        // totalDif[i] += q2Dif;
+
+                        alert(`Friends available: ${users[i].Name} and ${totalDif[i]}`)
                     }
+                    console.log(totalDif)
+
+                    // totalDif.sort(function (a, b) {
+                    //     for (let i=1; i<totalDif.length; i++){
+                    //     return parseInt(a.[i]) - parseInt(b.price);
+                    //     }
+                    // });
+                
                 });
 
         }

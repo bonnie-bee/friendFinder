@@ -13,7 +13,6 @@ const PORT = 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-
 require("./routing/apiRoutes")(app);
 require("./routing/htmlRoutes")(app);
 
