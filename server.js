@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 const app = express();
 // const html = require('./routing/htmlRoutes.js')
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // module.exports = express, bodyParser, path, app, PORT;
 
