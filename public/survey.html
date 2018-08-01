@@ -274,9 +274,10 @@
                     <label class="form-check-label" for="inlineRadio5">5 (Strongly Agree)</label>
                 </div>
             </div>
-            <input class="btn btn-primary" type="submit" value="Submit">
+            <input class="btn btn-primary" id = "surveyBtn" type="submit" value="Submit">
         </form>
         <br>
+        <a class="btn btn-primary btn-sm" id="apiBtn" href="/api/users" role="button">User API</a>
     </div>
 
 
@@ -321,35 +322,35 @@
                         let q4Dif = Math.abs(newUserQ4 - listQ4);
                         totalDif[i] += q4Dif;
 
-                        // let newUserQ2 = users[0].Score[1];
-                        // let listQ2 = users[i].Score[1];
-                        // let q2Dif = Math.abs(newUserQ2 - listQ2);
-                        // totalDif[i] += q2Dif;
+                        let newUserQ5 = users[0].Score[1];
+                        let listQ5 = users[i].Score[1];
+                        let q5Dif = Math.abs(newUserQ5 - listQ5);
+                        totalDif[i] += q5Dif;
 
-                        // let newUserQ2 = users[0].Score[1];
-                        // let listQ2 = users[i].Score[1];
-                        // let q2Dif = Math.abs(newUserQ2 - listQ2);
-                        // totalDif[i] += q2Dif;
+                        let newUserQ6 = users[0].Score[1];
+                        let listQ6 = users[i].Score[1];
+                        let q6Dif = Math.abs(newUserQ6 - listQ6);
+                        totalDif[i] += q6Dif;
 
-                        // let newUserQ2 = users[0].Score[1];
-                        // let listQ2 = users[i].Score[1];
-                        // let q2Dif = Math.abs(newUserQ2 - listQ2);
-                        // totalDif[i] += q2Dif;
+                        let newUserQ7 = users[0].Score[1];
+                        let listQ7 = users[i].Score[1];
+                        let q7Dif = Math.abs(newUserQ7 - listQ7);
+                        totalDif[i] += q7Dif;
 
-                        // let newUserQ2 = users[0].Score[1];
-                        // let listQ2 = users[i].Score[1];
-                        // let q2Dif = Math.abs(newUserQ2 - listQ2);
-                        // totalDif[i] += q2Dif;
+                        let newUserQ8 = users[0].Score[1];
+                        let listQ8 = users[i].Score[1];
+                        let q8Dif = Math.abs(newUserQ8 - listQ8);
+                        totalDif[i] += q8Dif;
 
-                        // let newUserQ2 = users[0].Score[1];
-                        // let listQ2 = users[i].Score[1];
-                        // let q2Dif = Math.abs(newUserQ2 - listQ2);
-                        // totalDif[i] += q2Dif;
+                        let newUserQ9 = users[0].Score[1];
+                        let listQ9 = users[i].Score[1];
+                        let q9Dif = Math.abs(newUserQ9 - listQ9);
+                        totalDif[i] += q9Dif;
 
-                        // let newUserQ2 = users[0].Score[1];
-                        // let listQ2 = users[i].Score[1];
-                        // let q2Dif = Math.abs(newUserQ2 - listQ2);
-                        // totalDif[i] += q2Dif;
+                        let newUserQ10 = users[0].Score[1];
+                        let listQ10 = users[i].Score[1];
+                        let q10Dif = Math.abs(newUserQ10 - listQ10);
+                        totalDif[i] += q10Dif;
 
                         alert(`Friends available: ${users[i].Name} and ${totalDif[i]}`)
                     }
@@ -366,7 +367,7 @@
         }
 
 
-        $('.btn').on('click', function () {
+        $('#surveyBtn').on('click', function () {
             const userScore = [];
             let name;
             let pic;
